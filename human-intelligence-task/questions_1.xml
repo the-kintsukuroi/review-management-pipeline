@@ -1,0 +1,27 @@
+<!-- this questions file works for a single HIT  -->
+<!-- HITID = 36FQTHX306J8YJTE8HJB39L2B1GB30 (Use to Get Results)-->
+<HTMLQuestion xmlns="http://mechanicalturk.amazonaws.com/AWSMechanicalTurkDataSchemas/2011-11-11/HTMLQuestion.xsd">
+<HTMLContent><![CDATA[
+<!-- YOUR HTML BEGINS -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+<script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+</head>
+<body>
+<form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'><input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+<h2>Fake Review Detection</h2>
+<h3> Review: "I had 2 days of medical appointments during a heat wave.  Air conditioning was thankfully robust and our room was quite clean.  Parking and food is close by, along with a drugstore.  Food offerings won’t make the Michelin guide , but are adequate.  And if you don’t mind a good walk, Fenway Park is just down Brookline Ave.  Just head for the iconic and comforting Citgo sign.    Also , a quick shout out to Angel, the highly efficient front office mgr. who will go the extra mile to make sure your visit is pleasant!"</h3>
+<div class="panel-body">
+<input type="radio" name="question_1" value="False"> Fake<br>
+<input type="radio" name="question_1" value="True"> Real<br>
+</div>
+<p><input type='submit' id='submitButton' value='Submit' /></p></form>
+<script language='Javascript'>turkSetAssignmentID();</script>
+</body></html>
+<!-- YOUR HTML ENDS -->
+]]>
+</HTMLContent>
+<FrameHeight>600</FrameHeight>
+</HTMLQuestion>
