@@ -5,7 +5,7 @@ from boto3_mturk_aws import get_results_mturk_hit, create_mturk_hit
 #create_mturk_hit(xml_document_path='questions_3.xml') # 3IJ95K7NE04BT4UZ6MZS08RI83LGNA
 #create_mturk_hit(xml_document_path='questions_4.xml')  # 3XABXM4AK4XH3M193GFLCP5PPVX8QB
 
-get_results_mturk_hit(hit_id = '3IKMEYR0MZNK641PAUMN6CGD4N8K2J')
+get_results_mturk_hit(hit_id = '3BCRDCM0PGM8O5KQXWYQWPXPKSAK60')
 
 '''Title = 'Fake Review Detection',
 Description = 'Read the review and identify fake or real',
