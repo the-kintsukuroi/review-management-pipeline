@@ -29,3 +29,6 @@ first_file_name = create_temp_file(300, 'firstfile.txt','f')
 
 upload_file('review-processing/reviews.csv', 
             'reviews2ce7b345-0e23-4d01-ac84-e2ea6def5d65', object_name=None)
+
+upload_file('/Users/karshi/Documents/GitHub/review-management-pipeline/review-processing/sampled_reviews.csv', 
+            'reviews2ce7b345-0e23-4d01-ac84-e2ea6def5d65', object_name=None)

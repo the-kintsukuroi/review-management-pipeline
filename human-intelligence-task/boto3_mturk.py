@@ -1,3 +1,4 @@
+from boto.mturk.question import Question
 import boto3
 import xmltodict     # to help parse the XML answers supplied from MTurk
 import csv
@@ -12,16 +13,16 @@ def create_mturk_hit(xml_documnet_path):
     endpoint_url = MTURK_SANDBOX
     )
     print("I have $" + mturk.get_account_balance()['AvailableBalance'] + " in my Sandbox account")
-
-    question = open(file=xml_documnet_path,mode='r').read() # change the xml document for changing tasks
+    question=(xml_documnet_path)
+    #question = open(file=xml_documnet_path,mode='r').read() # change the xml document for changing tasks
     Title = input('Enter Title for Mturk HIT:')
     Description = input('Enter description for Mturk HIT:')
     Keywords = input('Enter Keywords for Mturk HIT:')
-    Reward = input('Enter Reward value for Mturk HIT:')
-    MaxAssignments = input('Enter MaxAssignments value for Mturk HIT:')
-    LifetimeInSeconds = input('Enter LifetimeInSeconds value for Mturk HIT:')
-    AssignmentDurationInSeconds = input('Enter AssignmentDurationInSeconds value for Mturk HIT:')
-    AutoApprovalDelayInSeconds = input('Enter AutoApprovalDelayInSeconds value for Mturk HIT:')
+    Reward = input(int('Enter Reward value for Mturk HIT:'))
+    MaxAssignments = input(int('Enter MaxAssignments value for Mturk HIT:'))
+    LifetimeInSeconds = input(int('Enter LifetimeInSeconds value for Mturk HIT:'))
+    AssignmentDurationInSeconds = input(int('Enter AssignmentDurationInSeconds value for Mturk HIT:'))
+    AutoApprovalDelayInSeconds = input(int('Enter AutoApprovalDelayInSeconds value for Mturk HIT:'))
     
     new_hit = mturk.create_hit(
         Title = Title,
