@@ -1,12 +1,7 @@
 import pandas
 from boto3_mturk_aws import create_mturk_hit
-import pandas
 
-a = pandas.read_csv("sampled_reviews.csv")
-print(a)
-
-sampled_reviews = pd.read_csv("sampled_reviews.csv", "r")
-sampled_reviews = pd.DataFrame(sampled_reviews)
+sampled_reviews = pandas.read_csv("sampled_reviews.csv", error_bad_lines=False, engine="python")
 print(sampled_reviews)
 
 #create_mturk_hit(xml_document_path='questions_1.xml')
