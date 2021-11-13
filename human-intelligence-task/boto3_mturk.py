@@ -13,8 +13,8 @@ def create_mturk_hit(xml_documnet_path):
     endpoint_url = MTURK_SANDBOX
     )
     print("I have $" + mturk.get_account_balance()['AvailableBalance'] + " in my Sandbox account")
-    question=(xml_documnet_path)
-    #question = open(file=xml_documnet_path,mode='r').read() # change the xml document for changing tasks
+    #question=(xml_documnet_path)
+    question = open(file=xml_documnet_path,mode='r').read() # change the xml document for changing tasks
     Title = input('Enter Title for Mturk HIT:')
     Description = input('Enter description for Mturk HIT:')
     Keywords = input('Enter Keywords for Mturk HIT:')

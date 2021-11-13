@@ -66,8 +66,8 @@ def create_mturk_hit(xml_document_path):
     print("Your account balance is {}".format(user_balance['AvailableBalance']))
 
     # The question we ask the workers is contained in this file.
-    #question_sample = open(xml_document_path, "r").read()  
-    question_sample = str(xml_document_path)
+    question_sample = open(xml_document_path, "r").read()  
+    #question_sample = str(xml_document_path)
     # Example of using qualification to restrict responses to Workers who have had
     # at least 80% of their assignments approved. See:
     # http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_QualificationRequirementDataStructureArticle.html#ApiReference_QualificationType-IDs
@@ -110,7 +110,7 @@ def create_mturk_hit(xml_document_path):
 
     print("\nAnd see results here:")
     print(mturk_environment['manage'])
-'''
+
 def get_results_mturk_hit(hit_id):
 # Copyright 2017 Amazon.com, Inc. or its affiliates
 
@@ -207,6 +207,3 @@ def get_results_mturk_hit(hit_id):
 
     output = pd.DataFrame(output)
     output.to_csv('results.csv')
-        
-
-'''
