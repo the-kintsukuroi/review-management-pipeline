@@ -4,7 +4,7 @@ import csv
 import pandas as pd
 from xml.dom.minidom import parseString
 
-def create_mturk_hit(question_xml):
+def create_mturk_hit(xml_document_path):
 # Copyright 2017 Amazon.com, Inc. or its affiliates
 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -67,7 +67,7 @@ def create_mturk_hit(question_xml):
 
     # The question we ask the workers is contained in this file.
     #question_sample = open(xml_document_path, "r").read()  
-    question_sample = str(question_xml)
+    question_sample = str(xml_document_path)
     # Example of using qualification to restrict responses to Workers who have had
     # at least 80% of their assignments approved. See:
     # http://docs.aws.amazon.com/AWSMechTurk/latest/AWSMturkAPI/ApiReference_QualificationRequirementDataStructureArticle.html#ApiReference_QualificationType-IDs
@@ -83,10 +83,10 @@ def create_mturk_hit(question_xml):
     Description = input('Enter description for Mturk HIT:')
     Keywords = input('Enter Keywords for Mturk HIT:')
     Reward = input('Enter Reward value for Mturk HIT:')
-    MaxAssignments = int(input('Enter MaxAssignments value for Mturk HIT:'))
-    LifetimeInSeconds = int(input('Enter LifetimeInSeconds value for Mturk HIT:'))
-    AssignmentDurationInSeconds = int(input('Enter AssignmentDurationInSeconds value for Mturk HIT:'))
-    AutoApprovalDelayInSeconds = int(input('Enter AutoApprovalDelayInSeconds value for Mturk HIT:'))
+    MaxAssignments = 3
+    LifetimeInSeconds = 172800 #2days
+    AssignmentDurationInSeconds = 900 #15min
+    AutoApprovalDelayInSeconds = 14400 #4hrs)
     
     response = client.create_hit(
         Title = Title,
